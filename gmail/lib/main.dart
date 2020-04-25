@@ -44,14 +44,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<http.Response> createAccount(String id) async{
-
-   String url = 'https://us-central1-panama-ac424.cloudfunctions.net/api/users';
+   print(id);
+   String url = 'https://us-central1-panama-ac424.cloudfunctions.net/api/users/$id';
    Map<String,String> headers ={"Content-type": "application/json"};
-   var requestBody = '{ "uid": "$id","firstName":"","lastName":"","email":"","userType":""}';
-
-   var response = await http.post(url,headers: headers,body:requestBody);
+   var response = await http.get(url,headers: headers);
    
-    if(response.statusCode != 201){
+    if(response.statusCode == 200){
       return Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
     }else{
       return Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));
