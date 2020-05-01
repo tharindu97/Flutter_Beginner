@@ -31,58 +31,34 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
       length: 3, 
       child: Scaffold(
+        backgroundColor: Colors.redAccent,
         appBar: AppBar(
           backgroundColor: Colors.white,
+          elevation: 0,
           bottom: TabBar(
             unselectedLabelColor: Colors.redAccent,
+            indicatorSize: TabBarIndicatorSize.label,
             indicator: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10)),
               color: Colors.redAccent
             ),
             tabs: [
               Tab(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border.all(
-                      color: Colors.redAccent,
-                      width: 1
-                    )
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text('APPS'),
-                  ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text('APPS'),
                 ),
               ),
               Tab(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border.all(
-                      color: Colors.redAccent,
-                      width: 1
-                    )
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text('MOVIES'),
-                  ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text('MOVIES'),
                 ),
               ),
               Tab(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border.all(
-                      color: Colors.redAccent,
-                      width: 1
-                    )
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text('GAMES'),
-                  ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text('GAMES'),
                 ),
               ),
             ] 
@@ -126,3 +102,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+//7.24
