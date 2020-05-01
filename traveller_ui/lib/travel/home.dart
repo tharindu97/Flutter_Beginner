@@ -7,118 +7,91 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  bool count;
-
-  final favilt = Material(
-    child: Container(
-      color: Colors.yellow,
-      child: Center(
-        child: Column(
-          children: <Widget>[
-            Text('Favirit false')
-          ],
-        ),
-      ),
-    ),
-  );
-
-  final setting = Material(
-    child: Container(
-      color: Colors.white,
-      child: Center(
-        child: Column(
-          children: <Widget>[
-            Text('setting true')
-          ],
-        ),
-      ),
-    ),    
-  );
-
-
-  
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-       body: Container(
-         color: Colors.greenAccent,
-         child: Column(
-           children: <Widget>[
-
-             SizedBox(
-               height: 200.0,
-               child: Container(
-                 color: Colors.yellowAccent,
-                 child: Center(
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                     children: <Widget>[
-                        Text('Tharindu Kavishna \npanama Srilanka',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.blueAccent
-                              ),
-                        ),
-                        Padding(padding: EdgeInsets.only(left: 50)),
-                        CircleAvatar(
-                            backgroundColor: Colors.blue,
-                            radius: 60,
-                          ) 
-                     ],
-                   ),
-                 ),
-               ),
-             ),
-
-
-             SizedBox(
-               height: 25,
-               child: Container(
-                 color: Colors.grey,
-                 child: Center(
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                     children: <Widget>[
-                       RaisedButton(
-                         child: Text('FAVOURITES',
-                         style: TextStyle(
-                            color: Colors.white
+    return DefaultTabController(length: 2, 
+    child: Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(250),
+          child: AppBar(
+          leading: IconButton(
+                icon: Icon(Icons.navigate_before),
+                tooltip: 'Next page',
+                onPressed: () {},
+          ),
+          flexibleSpace: Container(
+            color: Colors.blue,
+              child: Column(
+                children: <Widget>[
+                  Padding(padding: EdgeInsets.only(top: 50)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text('Tharindu Kavishna \npanama Srilanka',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white
                             ),
-                          ),
-                         onPressed: () => count = false
-                         ),
-                       Padding(padding: EdgeInsets.only(left: 100)),
-                       RaisedButton(
-                         child:  Text('SETTING',
-                         style: TextStyle(
-                           color: Colors.white
-                          ),
-                         ),
-                         onPressed: () => count = true,
-                       ),
-                     ],
-                   ),
-                 ),
-               ),
-             ),
-
-             SizedBox(
-               height: 250,
-               child: Container(
-                 color: Colors.redAccent,
-                 child: Center(
-                   child: Column(
-                     children: <Widget>[
-                       count == false ? favilt : setting                   
-                     ],
-                   ),
-                 ),
-               ),
-             )
-           ],
-         ),
-       ),
-    );
+                      ),
+                      Padding(padding: EdgeInsets.only(left: 50)),
+                      CircleAvatar(
+                          backgroundColor: Colors.white,
+                          radius: 60,
+                        ) 
+                    ],
+                  ),
+                ]
+              )
+           ),
+          bottom: TabBar(
+            unselectedLabelColor: Colors.white,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicator: BoxDecoration(
+              color: Colors.greenAccent
+            ),
+            tabs: [
+              Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text('FAVIERITY'),
+                  ),
+                ),
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text('SETTINGS'),
+                  ),
+                ),
+            ]
+          ),
+        ),
+      ),
+      body: TabBarView(
+        children: [
+          Container(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Favierty')
+                  ],
+                ),
+              ),
+            ),
+          Container(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Settings')
+                  ],
+                ),
+              ),
+            ),
+        ]
+      ),
+    )
+  );
   }
 }
