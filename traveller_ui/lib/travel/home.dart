@@ -9,6 +9,138 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    final favourites = Material(
+      child: Container(
+        color: Colors.purple[900],
+        child: Row(
+                children: <Widget>[
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 15)),
+                          SizedBox(
+                            height: 55,
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.only(left: 8)),
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 15)),
+                          SizedBox(
+                            height: 55,
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                ],
+              ),
+      ),
+    );
+
+    final settings = Material(
+      child: Container(
+        color: Colors.purple[900],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text('PERSONAL DETAILS'),
+            Padding(padding: EdgeInsets.only(top:10)),
+            SizedBox(
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Text('Name',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.only(left:70)),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Text('Location',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.only(left:70)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
     return DefaultTabController(length: 2, 
     child: Scaffold(
       appBar: PreferredSize(
@@ -20,19 +152,30 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {},
           ),
           flexibleSpace: Container(
-            color: Colors.purple,
+            color: Colors.purple[800],
               child: Column(
                 children: <Widget>[
-                  Padding(padding: EdgeInsets.only(top: 50)),
+                  Padding(padding: EdgeInsets.only(top: 70)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text('Tharindu Kavishna \npanama Srilanka',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white
+                                  ),
                             ),
+                          Text('panama Srilanka',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white
+                                ),
+                          ),
+                        ],
                       ),
                       Padding(padding: EdgeInsets.only(left: 50)),
                       CircleAvatar(
@@ -48,7 +191,7 @@ class _HomePageState extends State<HomePage> {
             unselectedLabelColor: Colors.white,
             indicatorSize: TabBarIndicatorSize.label,
             indicator: BoxDecoration(
-              color: Colors.greenAccent
+              color: Colors.purple[900]
             ),
             tabs: [
               Tab(
@@ -69,280 +212,25 @@ class _HomePageState extends State<HomePage> {
       ),
       body: TabBarView(
         children: [
-          ListView(
-            padding: const EdgeInsets.all(10),
-            children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Container(
-                    height: 300,
-                    width: 190,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 230,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('image/emma.jpg'),
-                                  fit: BoxFit.fill
-                                )
-                              ),
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(top: 10)),
-                          SizedBox(
-                            height: 60,
-                            child: Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Text('Tharindu Kavishna',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                  Text('panama north')
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 8)),
-                  Container(
-                    height: 300,
-                    width: 190,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 230,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('image/emma.jpg'),
-                                  fit: BoxFit.fill
-                                )
-                              ),
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(top: 10)),
-                          SizedBox(
-                            height: 60,
-                            child: Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Text('Tharindu Kavishna',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                  Text('panama north')
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ),
-                  ),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(top: 8)),
-              Row(
-                children: <Widget>[
-                  Container(
-                    height: 300,
-                    width: 190,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 230,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('image/emma.jpg'),
-                                  fit: BoxFit.fill
-                                )
-                              ),
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(top: 10)),
-                          SizedBox(
-                            height: 60,
-                            child: Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Text('Tharindu Kavishna',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                  Text('panama north')
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 8)),
-                  Container(
-                    height: 300,
-                    width: 190,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 230,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('image/emma.jpg'),
-                                  fit: BoxFit.fill
-                                )
-                              ),
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(top: 10)),
-                          SizedBox(
-                            height: 60,
-                            child: Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Text('Tharindu Kavishna',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                  Text('panama north')
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ),
-                  ),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(top: 8)),
-              Row(
-                children: <Widget>[
-                  Container(
-                    height: 300,
-                    width: 190,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 230,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('image/emma.jpg'),
-                                  fit: BoxFit.fill
-                                )
-                              ),
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(top: 10)),
-                          SizedBox(
-                            height: 60,
-                            child: Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Text('Tharindu Kavishna',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                  Text('panama north')
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.only(left: 8)),
-                  Container(
-                    height: 300,
-                    width: 190,
-                    color: Colors.white,
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: 230,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('image/emma.jpg'),
-                                  fit: BoxFit.fill
-                                )
-                              ),
-                            ),
-                          ),
-                          Padding(padding: EdgeInsets.only(top: 10)),
-                          SizedBox(
-                            height: 60,
-                            child: Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Text('Tharindu Kavishna',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  ),
-                                  Text('panama north')
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                    ),
-                  ),
-                ],
-              ),
-            ],
+          Container(
+            color: Colors.purple[900],
+            child: ListView(
+              padding: const EdgeInsets.all(10),
+              children: <Widget>[
+                favourites,
+                Padding(padding: EdgeInsets.only(top: 8)),
+                favourites,
+                Padding(padding: EdgeInsets.only(top: 8)),
+                favourites,
+                Padding(padding: EdgeInsets.only(top: 8)),
+                favourites
+              ],
+            ),
           ),
           ListView(
             padding: const EdgeInsets.all(8),
             children: <Widget>[
-              Container(
-                height: 50,
-                color: Colors.amber[600],
-                child: const Center(child: Text('Entry A')),
-              ),
-              Container(
-                height: 50,
-                color: Colors.amber[500],
-                child: const Center(child: Text('Entry B')),
-              ),
-              Container(
-                height: 50,
-                color: Colors.amber[100],
-                child: const Center(child: Text('Entry C')),
-              ),
+              settings
             ],
           ),
         ]
