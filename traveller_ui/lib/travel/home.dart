@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {},
           ),
           flexibleSpace: Container(
-            color: Colors.blue,
+            color: Colors.purple,
               child: Column(
                 children: <Widget>[
                   Padding(padding: EdgeInsets.only(top: 50)),
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Padding(padding: EdgeInsets.only(left: 50)),
                       CircleAvatar(
-                          backgroundColor: Colors.white,
+                          backgroundImage: AssetImage('image/emma.jpg'),
                           radius: 60,
                         ) 
                     ],
@@ -69,26 +69,282 @@ class _HomePageState extends State<HomePage> {
       ),
       body: TabBarView(
         children: [
-          Container(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Favierty')
-                  ],
-                ),
+          ListView(
+            padding: const EdgeInsets.all(10),
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 10)),
+                          SizedBox(
+                            height: 60,
+                            child: Container(
+                              child: Column(
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.only(left: 8)),
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 10)),
+                          SizedBox(
+                            height: 60,
+                            child: Container(
+                              child: Column(
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                ],
               ),
-            ),
-          Container(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Settings')
-                  ],
-                ),
+              Padding(padding: EdgeInsets.only(top: 8)),
+              Row(
+                children: <Widget>[
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 10)),
+                          SizedBox(
+                            height: 60,
+                            child: Container(
+                              child: Column(
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.only(left: 8)),
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 10)),
+                          SizedBox(
+                            height: 60,
+                            child: Container(
+                              child: Column(
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                ],
               ),
-            ),
+              Padding(padding: EdgeInsets.only(top: 8)),
+              Row(
+                children: <Widget>[
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 10)),
+                          SizedBox(
+                            height: 60,
+                            child: Container(
+                              child: Column(
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                  Padding(padding: EdgeInsets.only(left: 8)),
+                  Container(
+                    height: 300,
+                    width: 190,
+                    color: Colors.white,
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 230,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('image/emma.jpg'),
+                                  fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.only(top: 10)),
+                          SizedBox(
+                            height: 60,
+                            child: Container(
+                              child: Column(
+                                children: <Widget>[
+                                  Text('Tharindu Kavishna',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  ),
+                                  Text('panama north')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          ListView(
+            padding: const EdgeInsets.all(8),
+            children: <Widget>[
+              Container(
+                height: 50,
+                color: Colors.amber[600],
+                child: const Center(child: Text('Entry A')),
+              ),
+              Container(
+                height: 50,
+                color: Colors.amber[500],
+                child: const Center(child: Text('Entry B')),
+              ),
+              Container(
+                height: 50,
+                color: Colors.amber[100],
+                child: const Center(child: Text('Entry C')),
+              ),
+            ],
+          ),
         ]
       ),
     )
